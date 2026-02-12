@@ -1,6 +1,7 @@
 using Stocks.Domain.Services;
 using StockApp.Api.Services;
 using Stocks.Domain.Hubs;
+using Stocks.API.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddSignalR();
@@ -21,6 +22,7 @@ builder.Services.AddControllers();
 
 var app = builder.Build();
 app.UseCors("StocksCorsPolicy");
+app.UseMiddleware<ExceptionMiddleware>();
 
 app.UseAuthorization();
 

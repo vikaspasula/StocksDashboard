@@ -9,10 +9,12 @@ namespace StocksAPI.Controllers
     public class StocksController : ControllerBase
     {
         private readonly IStockService _stockService;
+        private readonly ILogger<StocksController> _logger;
 
-        public StocksController(IStockService stockService)
+        public StocksController(IStockService stockService, ILogger<StocksController> logger)
         {
             _stockService = stockService;
+            _logger = logger;
         }
 
         [HttpGet]
@@ -26,6 +28,7 @@ namespace StocksAPI.Controllers
             }
             catch (Exception ex)
             {
+                _logger.LogError(ex, "Failed to retrive stocks info");
                 return StatusCode(500, ex.Message);
             }
         }
