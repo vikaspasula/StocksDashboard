@@ -13,17 +13,14 @@ builder.Services.AddCors(options =>
         policy.WithOrigins("http://localhost:5173") 
               .AllowAnyHeader()
               .AllowAnyMethod()
-              .AllowCredentials(); // required for SignalR
+              .AllowCredentials(); 
     });
 });
-// Add services to the container.
-builder.Services.AddControllers();
 
+builder.Services.AddControllers();
 
 var app = builder.Build();
 app.UseCors("StocksCorsPolicy");
-
-// Configure the HTTP request pipeline.
 
 app.UseAuthorization();
 
