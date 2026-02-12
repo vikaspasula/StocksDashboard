@@ -1,9 +1,9 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import Stocks from './Stocks.tsx'
+import StocksGrid from "./components/stocksgrid";
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <Stocks />
+        <StocksGrid />
   </StrictMode>,
 )

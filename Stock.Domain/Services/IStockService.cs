@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Stock.Domain.Models;
+using Stocks.Domain.Models;
 
-namespace Stock.Domain.Services
+namespace Stocks.Domain.Services
 {
     public interface IStockService
     {

@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Stock.Domain.Models;
+using Stocks.Domain.Models;
+using Stocks.Domain.Services;
 
-namespace Stock.Domain.Services
+namespace Stocks.Domain.Services
 {
     public class StockService : IStockService
     {
@@ -27,13 +28,13 @@ namespace Stock.Domain.Services
         {
             new StockDetails
             {
-                Symbol = "AAPL",
+                Symbol = "Stock1",
                 Price = random.Next(100,200),
                 LastUpdated = DateTime.UtcNow
             },
             new StockDetails
             {
-                Symbol = "MSFT",
+                Symbol = "Stock2",
                 Price = random.Next(200,400),
                 LastUpdated = DateTime.UtcNow
             }

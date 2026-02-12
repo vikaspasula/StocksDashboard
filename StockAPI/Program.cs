@@ -1,4 +1,4 @@
-using Stock.Domain.Services;
+using Stocks.Domain.Services;
 using StockApp.Api.Services;
 using Stocks.Domain.Hubs;
 

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Stock.Domain.Models
+namespace Stocks.Domain.Models
 {
     public class StockDetails
     {

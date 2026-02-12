@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.SignalR;
 using Microsoft.Extensions.Hosting;
-using Stock.Domain.Models;
+using Stocks.Domain.Models;
 using Stocks.Domain.Hubs;
 
 namespace StockApp.Api.Services;
@@ -24,7 +24,7 @@ public class StockBackgroundService : BackgroundService
         {
             var stock = new StockDetails
             {
-                Symbol = "AAPL",
+                Symbol = "Stock1",
                 Price = random.Next(100, 200),
                 LastUpdated = DateTime.UtcNow
             };
